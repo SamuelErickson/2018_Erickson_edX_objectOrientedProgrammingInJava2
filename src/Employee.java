@@ -1,9 +1,10 @@
 public class Employee {
     // MAYBE should be abstract
-    private String name;
-    private double baseSalary;
-    private int EmployeeID;
-    private static int EmployeeCount = 0;
+    public String name;
+    public double baseSalary;
+    public int EmployeeID;
+    public static int EmployeeCount = 0;
+    public Employee Manager;
 
     public Employee(String name, double baseSalary){
         // this is the constructor
@@ -19,6 +20,10 @@ public class Employee {
 
     public String getName(){
         return this.name;
+    }
+
+    public Employee getManager(){
+        return this.Manager;
     }
 
     public int getEmployeeID(){
@@ -46,15 +51,13 @@ public class Employee {
     public String toString(){
         return(this.getEmployeeID()+" "+this.getName());
     }
-/*
-    public String employeeStatus(){
-        //not sure what to do here
 
-Should return a String representation of that Employee's current status. This will be different for every subclass of Employee
+    public String employeeStatus(){
+        return("Error: Should print employee status using subclass method ");
 
 
     }
-   */
+
 
 
 
